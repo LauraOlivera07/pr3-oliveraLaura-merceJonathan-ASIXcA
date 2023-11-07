@@ -10,9 +10,9 @@ Precio total = Base imponible * Tipo de IVA
 
 """
 factura= float(input("Introdueix l'import de la teva factura (IVA inclós): "))
-tclient = input("Tens la tarjeta client? (s/n): ").lower()
 
 if factura>=100:
+    tclient = input("Tens la tarjeta client? (s/n): ").lower()
     if tclient=="s":
         factura= factura*0.79 #precio sin iva
         pIva= factura*1.21
