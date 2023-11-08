@@ -1,13 +1,17 @@
-factura= float(input("Introdueix l'import de la teva factura (IVA inclós): "))
-tclient = input("Tens la tarjeta client? (s/n): ").lower()
+data= input("Introdueix una data (DD/MM/AAAA): ").split("/")
+dia=int(data[0])
+mes=int(data[1])
+any=int(data[2])
 
-if tclient=="n":
-    print(f"{factura:.2f}€")
+if mes>12 or dia>31 or any<0:
+    print("Data incorrecta")
 
+elif mes==4 or mes==6 or mes==9 or mes==11:
+    if dia>30:
+        print("Data incorrecta")
+
+elif mes==2:
+    if any%100==0 and any%400!=0 and dia>=29 or dia>=30:
+        print("Data incorrecta")
 else:
-    if factura>=100:
-        factura= factura*0.79 #precio sin iva
-        pIva= factura*1.21
-        print(f"{pIva:.2f}€")
-    else:
-        print(f"{factura:.2f}€")
+    print("Data correcta")
