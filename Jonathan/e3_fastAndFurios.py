@@ -17,7 +17,7 @@ if v_inst <= 0:
 
 else:
     v_m = (v_i + v_inst) / 2
-    print(f"{v_inst, v_m}")
+    print(f" La velocitat instantània és: {v_inst} i la velocitat mitjana és {v_m}")
 
 
 """

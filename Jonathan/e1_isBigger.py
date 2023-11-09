@@ -9,6 +9,10 @@ num1 = input("Quin és el primer número?")
 num2 = input("Quin és el segon número?")
 
 if num1 >= num2:
-    print(num1, num2)
+    # Intercanvia els números
+    num1, num2 = num2, num1
 
-else: print(num2, num1)
+# Mostra els nombres per pantalla
+print("Els valors ordenats són:")
+print("Primer número:", num1)
+print("Segon número:", num2)
