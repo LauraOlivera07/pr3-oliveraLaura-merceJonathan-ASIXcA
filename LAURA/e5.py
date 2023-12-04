@@ -9,12 +9,16 @@ try:
     num1, num2= [int(x) for x in input().split()]
     contador=0
 
-    if num1<0 or num2<0: #si algun numero és negatiu el comptador restarà
+    # si algun numero és negatiu el comptador restarà
+    if num1<0:
         for i in range(num1, 0):
             contador -=num2
-
-    for i in range(1, num1+1):
-        contador +=num2 #per cada iteració de l'1 al primer número+1, es sumarà el valor del segon número al comptador.
+    if num2<0:
+        for i in range(num2, 0):
+            contador -=num1
+    else:
+        for i in range(1, num1+1):
+            contador +=num2 #per cada iteració de l'1 al primer número+1, es sumarà el valor del segon número al comptador.
 
     print(contador)
 
